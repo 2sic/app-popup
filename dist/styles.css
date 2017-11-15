@@ -1,0 +1,41 @@
+/* note: this file name must start with an underscore "_" so it wont be generated in the output */
+@media all {
+  .app-popup {
+    display: none; }
+    .app-popup .popup {
+      background: #ffffff;
+      max-width: 600px;
+      max-height: 600px;
+      position: fixed;
+      display: block;
+      z-index: 999;
+      top: calc(50% - 200px);
+      left: calc(50% - 300px); }
+      .app-popup .popup .popup-content {
+        padding: 20px; }
+        .app-popup .popup .popup-content h1, .app-popup .popup .popup-content h2, .app-popup .popup .popup-content h3, .app-popup .popup .popup-content h4, .app-popup .popup .popup-content h5, .app-popup .popup .popup-content h6 {
+          margin-top: 0; }
+      .app-popup .popup .popup-close {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        background: #337ab7;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 10px;
+        padding-top: 3px;
+        cursor: pointer; }
+    .app-popup .background {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      left: 0;
+      background: transparent;
+      width: 100vw;
+      height: 100vh; } }
+
+/*# sourceMappingURL=styles.css.map */

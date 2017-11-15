@@ -1,0 +1,58 @@
+// local variables file
+@import "_variables.scss";
+
+// later on it's usually better to use variables from the skins
+// so that you can re-build the css using the same values used in the skin
+// it would then look a bit like this:
+// @import "../../../_default/skins/2sxc-bootstrap-skin/src/_variables.scss";
+
+@media all {
+	.app-popup {
+		display: none;
+
+		.popup {
+			background: #ffffff;
+			max-width: 600px;
+			max-height: 600px;
+			position: fixed;
+			display: block;
+			z-index: 999;
+			top: calc(50% - 200px);
+			left: calc(50% - 300px);
+
+			.popup-content {
+				padding: 20px;
+
+				h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+			}
+
+			.popup-close {
+				position: absolute;
+				right: -5px;
+				top: -5px;				
+				background: $brand-primary;
+				color: #fff;
+				width: 20px;
+				height: 20px;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				text-align: center;
+				font-size: 10px;
+				padding-top: 3px;
+				cursor: pointer;
+			}
+		}
+
+		.background {
+			position: fixed;
+			z-index: 998;
+			top: 0;
+			left: 0;
+			background: transparent;
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+}
+
+

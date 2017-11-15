@@ -1,0 +1,67 @@
+<script src="@App.Path/dist/Cookie.js"></script>
+<script src="@App.Path/dist/scripts.js"></script>
+<link rel="stylesheet" type="text/css" href="@App.Path/dist/styles.css" />
+
+@if(Permissions.UserMayEditContent)
+{
+    <div class="">
+        <h2>Popup Settings</h2>
+        <table>
+            <tr>
+                <td>Edit</td>
+                <td>@Edit.Toolbar(Content)</td>
+            </tr>
+        </table>
+    </div>
+}
+
+<script>
+    $(function() {
+        if(Cookies.get('seenpopup') != undefined) {
+            $(".app-popup").css("display", "none");
+        } else {
+            $(".app-popup").fadeIn();
+        }
+    });
+</script>
+
+@if (Content.Activated == false)
+{
+    
+}
+else
+{
+    <div class="app-popup">
+        <div class="popup">
+            <div class="popup-close">X</div>
+            <div>
+                <img src="@Content.Image?q=80&w=600&h=200&mode=crop" />
+            </div>
+            <div class="popup-content">
+                @Html.Raw(Content.Text)
+
+                <a href="@Content.Link" target="@((Content.LinkNewTab) ? "_blank" : "_self")" class="btn btn-primary">@Content.LinkText</a>
+            </div>
+        </div>
+        <div class="background">
+
+        </div>
+    </div>
+
+    if (Content.AlwaysActive == true)
+    {
+
+    }
+    else
+    {
+        <script>
+            $(function() {
+                /*
+                    Cookie stuff
+                */
+                Cookies.set('seenpopup', 'true', { expires: @Content.Presentation.Duration });
+            });
+        </script>
+    }
+}
+
