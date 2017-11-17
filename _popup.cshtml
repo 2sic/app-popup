@@ -13,6 +13,12 @@
 
 @if(Permissions.UserMayEditContent)
 {
+    if (!String.IsNullOrEmpty(App.Resources.DoNotDeleteWarning))
+    {
+        <div class="alert alert-warning">
+            <span>@App.Resources.DoNotDeleteWarning</span>
+        </div>
+    }
     <div class="app-popup-settings">
         <div id="app-popup-close-menu" class="menu-close"></div>
         <h2>@App.Resources.PopupSettings</h2>
