@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* note: this file name must start with an underscore "_" so it wont be generated in the output */
 @media all {
   .app-popup {
@@ -9,33 +10,93 @@
       position: fixed;
       display: block;
       z-index: 999;
-      top: calc(50% - 200px);
-      left: calc(50% - 300px); }
+      top: calc(50% - 266.66667px);
+      left: calc(50% - 300px);
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      overflow: hidden; } }
+    @media all and (max-width: 600px) {
+      .app-popup .popup {
+        max-width: calc(100vw - 20px);
+        max-height: 100%;
+        left: 10px;
+        top: 10px; } }
+    @media all and (max-width: 320px) {
+      .app-popup .popup {
+        max-height: calc(100vh - 20px);
+        overflow: scroll; } }
+
+@media all {
       .app-popup .popup .popup-content {
         padding: 20px; }
         .app-popup .popup .popup-content h1, .app-popup .popup .popup-content h2, .app-popup .popup .popup-content h3, .app-popup .popup .popup-content h4, .app-popup .popup .popup-content h5, .app-popup .popup .popup-content h6 {
           margin-top: 0; }
       .app-popup .popup .popup-close {
-        position: absolute;
-        right: -5px;
-        top: -5px;
-        background: #337ab7;
-        color: #fff;
-        width: 20px;
         height: 20px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 10px;
-        padding-top: 3px;
-        cursor: pointer; }
+        width: 20px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+        background: black;
+        padding: 0 6px;
+        border-radius: 50%; }
+        .app-popup .popup .popup-close:after {
+          content: '✖';
+          line-height: 20px;
+          position: absolute;
+          font-size: 10px;
+          color: #fff;
+          transition: color .4 ease; }
+        .app-popup .popup .popup-close:hover:after {
+          color: red; }
     .app-popup .background {
       position: fixed;
       z-index: 998;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.8);
       width: 100vw;
-      height: 100vh; } }
+      height: 100vh; }
+    .app-popup.admin {
+      display: none; }
+  .app-popup-settings,
+  .app-popup-settings-small {
+    display: block;
+    position: fixed;
+    background: #fff;
+    top: 20%;
+    left: 0;
+    z-index: 1000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 7px 0px #c7c7c7;
+    padding: 20px; }
+    .app-popup-settings h2,
+    .app-popup-settings-small h2 {
+      font-size: 20px; }
+  .app-popup-settings {
+    display: none; }
+  .app-popup-settings-small {
+    height: auto;
+    padding: 5px; }
+  #app-popup-open-menu > span:first-of-type {
+    vertical-align: top; }
+  .menu-close {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer; }
+    .menu-close:after {
+      content: '✖';
+      line-height: 20px;
+      position: absolute;
+      font-size: 20px;
+      color: #666;
+      transition: color .4 ease; }
+    .menu-close:hover:after {
+      color: red; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,18 @@
+@{
+    var popup = PageData["popup"];
+}
+
+<div class="popup">
+    <div class="popup-close"></div>
+    <div>
+        <img src="@popup.Image?q=80&w=600&h=200&mode=crop" />
+    </div>
+    <div class="popup-content">
+        @Html.Raw(popup.Text)
+
+        <a href="@popup.Link" target="@((popup.LinkNewTab) ? "_blank" : "_self")" class="btn btn-primary">@popup.LinkText</a>
+    </div>
+</div>
+<div class="background">
+
+</div>
