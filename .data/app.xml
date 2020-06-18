@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.02.00" ExportDate="2020-06-03T08:23:01.2165917+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.02.01" ExportDate="2020-06-18T08:32:26.4932333+02:00">
   <Header>
     <App Guid="9e17b9db-1dc8-4c4e-af7e-69a511405c71" />
     <Language Default="en-US" />
@@ -490,16 +490,16 @@
             <Value Key="AddressMask" Value="" Type="String">
               <Dimension DimensionID="81" ReadOnly="false" />
             </Value>
-            <Value Key="Decimals" Value="0.0" Type="Number">
+            <Value Key="Decimals" Value="0" Type="Number">
               <Dimension DimensionID="81" ReadOnly="false" />
             </Value>
             <Value Key="InputType" Value="" Type="String">
               <Dimension DimensionID="81" ReadOnly="false" />
             </Value>
-            <Value Key="Max" Value="999.0" Type="Number">
+            <Value Key="Max" Value="999" Type="Number">
               <Dimension DimensionID="81" ReadOnly="false" />
             </Value>
-            <Value Key="Min" Value="0.0" Type="Number">
+            <Value Key="Min" Value="0" Type="Number">
               <Dimension DimensionID="81" ReadOnly="false" />
             </Value>
             <Value Key="ValidationRegEx" Value="" Type="String">
@@ -602,8 +602,11 @@
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="DisplayName" Value="Popups" Type="String">
+      <Value Key="DisplayName" Value="Pop-Up Message" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
+      </Value>
+      <Value Key="DisplayName" Value="Pop-Up Nachricht" Type="String">
+        <Dimension DimensionID="82" ReadOnly="false" />
       </Value>
       <Value Key="Folder" Value="Popups2" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
