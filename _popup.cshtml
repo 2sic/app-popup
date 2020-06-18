@@ -10,10 +10,10 @@
 @* Do not delete warning and demo popup for admin *@
 @if(Edit.Enabled){
   <div class="alert alert-warning d-flex justify-content-between">
-    <span>
+    <div class="d-flex align-items-center">
       @App.Resources.DoNotDeleteWarning
-      @Edit.Toolbar(Content)
-    </span>
+      @Edit.Toolbar(Content, toolbar: "settings&hover=left&autoAddMore=start")
+    </div>
     <a id="app-popup-test-popup" class="btn btn-primary btn-sm text-white">@App.Resources.TestPopup</a>
   </div>
 
