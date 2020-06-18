@@ -5,11 +5,12 @@ $(function() {
   /**
    * Show popup if it was rendered
    */
-
   if($(".app-popup:not(.admin)").length) {
-    $(".app-popup").fadeIn();
-    $("body").css("overflow", "hidden");
-    Cookies.set('seenpopup', 'true', { expires: $(".app-popup").data("cookie-duration") });
+    window.setTimeout(() => {
+      $(".app-popup").fadeIn();
+      $("body").css("overflow", "hidden");
+      Cookies.set('seenpopup', 'true', { expires: $(".app-popup").data("cookie-duration") });
+    }, 5000)
   }
 
 
