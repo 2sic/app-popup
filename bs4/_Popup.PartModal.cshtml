@@ -10,7 +10,7 @@
       <header class="modal__header">
         @if (Text.Has(popup.Image))
         {
-          <img class="img-fluid" src='@Tags.SafeUrl(popup.Image + "?q=80&w=600&h=200&mode=crop")' />
+          <img class="img-fluid" src='@Link.Image(url: popup.Image, quality: 80, width: 600, height: 200, resizeMode: "crop")' />
         }
         <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
       </header>
