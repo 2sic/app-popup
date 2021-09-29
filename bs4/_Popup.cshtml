@@ -1,0 +1,29 @@
+@inherits Custom.Hybrid.Razor12
+@{
+  var showPopup = Content.Presentation.Activated == true          // popup activated?
+    && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
+    && Content.Presentation.ActiveTo.Date >= DateTime.Now.Date;    // showTo >= today?
+}
+
+@* Do not delete warning and demo popup for admin *@
+@if(Edit.Enabled){
+  <div class="alert alert-warning d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      @Resources.DoNotDeleteWarning
+      @Edit.Toolbar(Content, toolbar: "settings&hover=left&autoAddMore=start")
+    </div>
+    <a id="app-popup-test-popup" data-micromodal-trigger="modal-js-@CmsContext.Module.Id" class="btn btn-primary btn-sm text-white">@Resources.TestPopup</a>
+  </div>
+
+  <div class="app-popup admin">
+    @Html.Partial("_Popup.PartModal.cshtml", new { Popup = Content })
+  </div>
+}
+
+@if (showPopup == true && Edit.Enabled == false) {
+  <div class="app-popup">
+    @Html.Partial("_Popup.PartModal.cshtml", new { Popup = Content })
+  </div>
+}
+        
+@Html.Partial("_Popup.PartAssets.cshtml", new { Popup = Content })
