@@ -4,6 +4,6 @@
   GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
 }
 
-<turnOn turn-on='{ "run": "window.appPopupMessage3.init()", "data": { "moduleId": @CmsContext.Module.Id, "duration": @DynamicModel.Popup.Presentation.Duration }}'></turnOn>
+<turnOn turn-on='{ "run": "window.appPopupMessage3.init()", "data": { "domId": "@DynamicModel.DomId", "duration": @DynamicModel.Duration }}'></turnOn>
 <link rel="stylesheet" href="@App.Path/bs4/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/bs4/dist/scripts.min.js" data-enableoptimizations="bottom"></script>

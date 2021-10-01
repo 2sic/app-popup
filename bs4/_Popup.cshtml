@@ -3,11 +3,7 @@
   var showPopup = Content.Presentation.Activated == true          // popup activated?
     && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
     && Content.Presentation.ActiveTo.Date >= DateTime.Now.Date;    // showTo >= today?
-
-  // todo maxim
-  // - moduleid not just the number, but the domId please
-  // - if you need the id separately (for the cookie) then pls pass 2 params, but I think you can use the dom-id
-  // - only include assets if we also have the popup
+  var domId = "app-popup3-js-modal-" + CmsContext.Module.Id;
 }
 
 @* Do not delete warning and demo popup for admin *@
@@ -17,22 +13,13 @@
       @Resources.DoNotDeleteWarning
       @Edit.Toolbar(Content, toolbar: "settings&hover=left&autoAddMore=start")
     </div>
-    <a id="app-popup-test-popup" data-micromodal-trigger="modal-js-@CmsContext.Module.Id" class="btn btn-primary btn-sm text-white">@Resources.TestPopup</a>
+    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@Resources.TestPopup</a>
   </div>
+}
 
-@* todo: 2mh - what's the admin class for? probably not used 
-and if it's not used, you can really put this further down so you don't duplicate these three lines
-...or four, if you only add the Assets when the popup is needed
-*@
-  <div class="app-popup admin">
-    @Html.Partial("_Popup.PartModal.cshtml", new { Popup = Content })
+@if (Edit.Enabled || showPopup) {
+  <div class="app-popup3">
+    @Html.Partial("_Popup.PartModal.cshtml", new { DomId = domId, Popup = Content })
   </div>
+  @Html.Partial("_Popup.PartAssets.cshtml", new { DomId = domId, Duration = Content.Presentation.Duration })
 }
-@* todo @maxim - use else if to not repeat edit.enabled (and BTW: it would be !Edit.Enabled )*@
-@if (showPopup == true && Edit.Enabled == false) {
-  <div class="app-popup">
-    @Html.Partial("_Popup.PartModal.cshtml", new { Popup = Content })
-  </div>
-}
-        
-@Html.Partial("_Popup.PartAssets.cshtml", new { Popup = Content })
