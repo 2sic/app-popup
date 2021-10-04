@@ -35,3 +35,6 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Updated to 2sxc 12.05 standard
     * Now hybrid - works with Oqtane
     * No more jQuery
+
+
+TODO: @2ro - standardize code of google-maps across apps
