@@ -23,9 +23,15 @@
 
 A standard popup message app to use with 2sxc.
 
-## Customize the app
+## Customize the App
 
 The Popup app does not have any app settings but two app resources(labels) you can customize.
 
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
 
+## History
+
+* v03.00 2021-10
+    * Updated to 2sxc 12.05 standard
+    * Now hybrid - works with Oqtane
+    * No more jQuery
