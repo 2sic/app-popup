@@ -4,6 +4,7 @@
 
 > This is a [2sxc](https://2sxc.org) App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
 
+A standard popup message app to use with 2sxc.
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
@@ -21,8 +22,6 @@
 | Bootstrap 4         | ✅    |
 | Bootstrap 5         | ✔️    | Works well, but not optimized
 
-A standard popup message app to use with 2sxc.
-
 ## Customize the App
 
 The Popup app does not have any app settings but two app resources(labels) you can customize.
@@ -35,6 +34,3 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Updated to 2sxc 12.05 standard
     * Now hybrid - works with Oqtane
     * No more jQuery
-
-
-TODO: @2ro - standardize code of google-maps across apps
