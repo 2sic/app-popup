@@ -43,11 +43,6 @@ $popup-height: 400px;
   border-top-right-radius: 4px;
   background: #d3d3d3;
   height: 200px !important;
-
-  // styles to negate skin header styling
-  // remove: when skin header has been fixed
-  position: relative !important;
-  transition: none !important;
 }
 
 @supports (display: flex) {
