@@ -20,7 +20,7 @@ A standard popup message app to use with 2sxc.
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✔️    | Works well, but not optimized
 | Bootstrap 4         | ✅    |
-| Bootstrap 5         | ✔️    | Works well, but not optimized
+| Bootstrap 5         | ✅    | 
 
 ## Customize the App
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.10.00" ExportDate="2021-11-30T09:34:18.0008023+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-14T17:32:19.202122+01:00">
   <Header>
     <App Guid="8551a815-e9c1-4827-ae4f-c602ad441def" />
     <Language Default="en-us" />
@@ -9,7 +9,7 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="TestPopup" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="3c6f4644-70e5-42c5-ab26-d40959276fc8" Json="True" KeyNumber="1801">
@@ -113,10 +113,10 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="739f6a57-2aed-484a-a839-8c61b9d1a175" Name="Popup" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="739f6a57-2aed-484a-a839-8c61b9d1a175" Name="Popup" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Image" Type="Hyperlink" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="cb4f31ec-972b-49cb-81d0-9d5cabf3b05a" Json="True" KeyNumber="1793">
@@ -403,7 +403,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="8c84b22c-3b14-4385-be10-996d4545db6b" Name="PopupSettings" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="8c84b22c-3b14-4385-be10-996d4545db6b" Name="PopupSettings" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Activated" Type="Boolean" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5e5a9aa1-f6ec-4e74-ae6c-4c4df40d3665" Json="True" KeyNumber="4126">
@@ -617,7 +617,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.01" Type="String">
+      <Value Key="Version" Value="03.01.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
@@ -763,7 +763,7 @@
       <Value Key="Link" Value="" Type="Hyperlink">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="LinkNewTab" Value="False" Type="Boolean">
+      <Value Key="LinkNewTab" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
       <Value Key="LinkText" Value="" Type="String">
@@ -809,6 +809,11 @@
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
       <Value Key="Text" Value="&lt;p&gt;test&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="81" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="184e6ba5-d5db-4af1-a180-41b278179fd7" Json="True">
+      <Value Key="Mode" Value="Koi?cssFramework" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
