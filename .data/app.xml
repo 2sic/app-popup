@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-14T17:32:19.202122+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.01" ExportDate="2022-01-05T09:28:04.7895668+01:00">
   <Header>
     <App Guid="8551a815-e9c1-4827-ae4f-c602ad441def" />
     <Language Default="en-us" />
@@ -617,7 +617,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.01.00" Type="String">
+      <Value Key="Version" Value="03.01.01" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
@@ -817,6 +817,7 @@
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="c12d17d0-8721-46b1-8cb6-36d26e9425cf" Json="True" KeyGuid="d32fa539-be2b-477f-85f7-53d840cde602" />
   </Entities>
   <PortalFiles>
     <File Id="6035" RelativePath="adam\PopupMessage3\QsOB4WLkrUaz5sDsuI_xeg\Image\ant-rozetsky-264641-unsplash.jpg" />
