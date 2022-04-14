@@ -34,3 +34,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Updated to 2sxc 12.05 standard
     * Now hybrid - works with Oqtane
     * No more jQuery
+* v03.02 2022-04
+    * Moved all access of Services to ToSic.Sxc.Services
+    * Changed all images to use latest Picture-tag technology
+

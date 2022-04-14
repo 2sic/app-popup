@@ -1,7 +1,8 @@
 @inherits Custom.Hybrid.Razor12
+@using ToSic.Sxc.Services;
 @{
   // Activate turnOn - see https://r.2sxc.org/turnon
-  GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
+  GetService<IPageService>().Activate("turnOn");
 }
 
 <turnOn turn-on='{ "run": "window.appPopupMessage3.init()", "data": { "domId": "@DynamicModel.DomId", "duration": @DynamicModel.Duration }}'></turnOn>
