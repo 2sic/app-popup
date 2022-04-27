@@ -37,4 +37,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * v03.02 2022-04
     * Moved all access of Services to ToSic.Sxc.Services
     * Changed all images to use latest Picture-tag technology
+    * Enabled the image configuration
 
