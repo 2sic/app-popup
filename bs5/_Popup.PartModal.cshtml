@@ -11,7 +11,7 @@
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
       @if (Text.Has(popup.Image)) {
         <header class="modal__header">
-            @imgSvc.Picture(popup.Image, settings: Settings.Images.Content, factor: 0.5, imgClass:"img-fluid")
+            @imgSvc.Picture(popup.Field("Image"), settings: Settings.Images.Content, factor: 0.5)
           <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
         </header>
       }
