@@ -1,9 +1,11 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @{
   var showPopup = Content.Presentation.Activated == true          // popup activated?
     && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
     && Content.Presentation.ActiveTo.Date >= DateTime.Now.Date;    // showTo >= today?
   var domId = "app-popup3-js-modal-" + CmsContext.Module.Id;
+  
+  var contentToolbar = Kit.Toolbar.Default().Settings(hover: "left", autoAddMore:"start", show:"always");
 }
 
 @* Do not delete warning and demo popup for admin *@
@@ -11,7 +13,7 @@
   <div class="alert alert-info d-flex justify-content-between">
     <div class="d-flex align-items-center">
       @Resources.DoNotDeleteWarning
-      @Edit.Toolbar(Content, toolbar: "settings&hover=left&autoAddMore=start")
+      @contentToolbar.AsTag(Content)
     </div>
     <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@Resources.TestPopup</a>
   </div>

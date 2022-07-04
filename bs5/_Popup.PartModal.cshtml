@@ -1,8 +1,6 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 @{
-  var imgSvc = GetService<IImageService>();
   var popup = DynamicModel.Popup;
 }
 
@@ -11,7 +9,7 @@
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
       @if (Text.Has(popup.Image)) {
         <header class="modal__header">
-            @imgSvc.Picture(popup.Field("Image"), settings: "Content", factor: 0.5)
+            @Kit.Image.Picture(popup.Field("Image"), settings: "Content", factor: 0.5)
           <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
         </header>
       }

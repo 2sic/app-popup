@@ -39,3 +39,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Changed all images to use latest Picture-tag technology
     * Enabled the image configuration
     * Replaced data-enableoptimizations with pageSvc.AssetAttributes()
+* v03.03 2022-06 
+    * Replaced all base classes with their 2sxc 14 equivalents
+    * Removed all GetService<> and used ServiceKit14
+    * Updated webpack
