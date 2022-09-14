@@ -9,7 +9,7 @@
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
       @if (Text.Has(popup.Image)) {
         <header class="modal__header">
-            @Kit.Image.Picture(popup.Field("Image"), settings: "Content", factor: 0.5)
+            @Kit.Image.Picture(popup.Field("Image"), settings: "Content", factor: 0.5, imgAlt: "")
           <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
         </header>
       }
