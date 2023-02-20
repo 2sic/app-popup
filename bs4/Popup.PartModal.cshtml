@@ -20,7 +20,7 @@
           }
           @Html.Raw(popup.Text)
           @if (Text.Has(popup.LinkText)) {
-            <a href="@Tags.SafeUrl(popup.Link)" target='@(popup.LinkNewTab ? "_blank" : "_self")'
+            <a href="@Tags.SafeUrl(popup.Link)" target='@(popup.LinkNewTab ? "blank" : "self")'
             class="btn btn-primary">@popup.LinkText</a>
           }
         </div>
