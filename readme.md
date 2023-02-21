@@ -30,16 +30,21 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* v03.00 2021-10
+* v.03.00 2021-10
     * Updated to 2sxc 12.05 standard
     * Now hybrid - works with Oqtane
     * No more jQuery
-* v03.02 2022-04
+* v.03.02 2022-04
     * Moved all access of Services to ToSic.Sxc.Services
     * Changed all images to use latest Picture-tag technology
     * Enabled the image configuration
     * Replaced data-enableoptimizations with pageSvc.AssetAttributes()
-* v03.03 2022-06 
+* v.03.03 2022-06 
     * Replaced all base classes with their 2sxc 14 equivalents
     * Removed all GetService<> and used ServiceKit14
     * Updated webpack
+* v.03.04 2023-02
+    * Replaced Tag.Custom with `Kit.HtmlTags`
+    * Replaced turnOn Tag with `Kit.Page.TurnOn`
+    * Removed _ from Filenames
+
