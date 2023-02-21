@@ -9,6 +9,8 @@ var data = new {
 
 }
 
+@* When the page is ready, run appPopupMessage3 init JS *@
 @Kit.Page.TurnOn("window.appPopupMessage3.init()", data: data)
+
 <link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @Kit.Page.AssetAttributes()>
 <script type="text/javascript" src="@App.Path/bs5/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
