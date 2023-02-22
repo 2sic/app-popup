@@ -1,29 +1,4 @@
 @inherits Custom.Hybrid.Razor14
-@{
-  var showPopup = Content.Presentation.Activated == true          // popup activated?
-    && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
-    && Content.Presentation.ActiveTo.Date >= DateTime.Now.Date;    // showTo >= today?
-  var domId = "app-popup3-js-modal-" + CmsContext.Module.Id;
-
-   //Default Toolbar with custom settings, show left
-  var contentToolbar = Kit.Toolbar.Default().Settings(hover: "left", autoAddMore:"start", show:"always");
-}
-
-@* Do not delete warning and demo popup for admin *@
-@if(Edit.Enabled){
-  <div class="alert alert-info d-flex justify-content-between">
-    <div class="d-flex align-items-center">
-      @Resources.Get("DoNotDeleteWarning")
-      @* Add Toolbar as ul li Element *@
-      @contentToolbar.AsTag(Content)
-    </div>
-    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@Resources.Get("TestPopup")</a>
-  </div>
-}
-
-@if (Edit.Enabled || showPopup) {
-  <div class="app-popup3">
-    @Html.Partial("Popup.PartModal.cshtml", new { DomId = domId, Popup = Content })
-  </div>
-  @Html.Partial("Popup.PartAssets.cshtml", new { DomId = domId, Duration = Content.Presentation.Duration })
-}
+@* --- This is the Bootstrap4 Edition of the Glossary --- *@
+@* This file is identical to Bootstrap5, so it will simply load the BS5 Edition *@
+@Html.Partial("../bs5/Popup.cshtml")

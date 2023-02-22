@@ -1,13 +1,4 @@
 @inherits Custom.Hybrid.Razor14
-
-@{
-
-var data = new {
-    domId = DynamicModel.DomId,
-    duration = DynamicModel.Duration
-};
-}
-@* When the page is ready, run appPopupMessage3 init JS *@
-@Kit.Page.TurnOn("window.appPopupMessage3.init()", data: data)
-<link rel="stylesheet" href="@App.Path/bs4/dist/styles.min.css" @Kit.Page.AssetAttributes()>
-<script type="text/javascript" src="@App.Path/bs4/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
+@* --- This is the Bootstrap4 Edition of the Glossary --- *@
+@* This file is identical to Bootstrap5, so it will simply load the BS5 Edition *@
+@Html.Partial("../bs5/Popup.PartAssets.cshtml")

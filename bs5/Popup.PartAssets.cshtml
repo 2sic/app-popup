@@ -12,5 +12,6 @@ var data = new {
 @* When the page is ready, run appPopupMessage3 init JS *@
 @Kit.Page.TurnOn("window.appPopupMessage3.init()", data: data)
 
-<link rel="stylesheet" href="@App.Path/bs5/dist/styles.min.css" @Kit.Page.AssetAttributes()>
-<script type="text/javascript" src="@App.Path/bs5/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
+@* Load the JavaScripts/Styles from the App folder. Each edition (bs5, bs3, etc.) has different files *@
+<link rel="stylesheet" href="@CmsContext.View.Path/dist/styles.min.css" @Kit.Page.AssetAttributes()>
+<script type="text/javascript" src="@CmsContext.View.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
