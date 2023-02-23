@@ -1,4 +1,6 @@
 @inherits Custom.Hybrid.Razor14
+@* --- This is the Bootstrap5 Edition of the Files --- *@
+
 @{
   var showPopup = Content.Presentation.Activated == true          // popup activated?
     && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
@@ -10,14 +12,14 @@
 }
 
 @* Do not delete warning and demo popup for admin *@
-@if(Edit.Enabled){
+@if (Edit.Enabled) {
   <div class="alert alert-info d-flex justify-content-between">
     <div class="d-flex align-items-center">
-      @Resources.Get("DoNotDeleteWarning")
+      @Resources.DoNotDeleteWarning
       @* Add Toolbar as ul li Element *@
       @contentToolbar.AsTag(Content)
     </div>
-    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@Resources.Get("TestPopup")</a>
+    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@Resources.TestPopup</a>
   </div>
 }
 
@@ -25,5 +27,5 @@
   <div class="app-popup3">
     @Html.Partial("Popup.PartModal.cshtml", new { DomId = domId, Popup = Content })
   </div>
-  @Html.Partial("Popup.PartAssets.cshtml", new { DomId = domId, Duration = Content.Presentation.Duration })
+  @Html.Partial("Assets.cshtml", new { DomId = domId, Duration = Content.Presentation.Duration })
 }
