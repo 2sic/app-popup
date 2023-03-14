@@ -8,11 +8,13 @@ winAny.appPopupMessage3.init ??= init;
 winAny.appPopupMessage3.popUpShown = false; // parameter to prevent more than 1 popups showing simultaniously
 
 function init({ domId, duration }: { domId: string, duration: string }) {
+    console.log('init')
     MicroModal.init({ awaitCloseAnimation: true });
     if (!Cookies.get(`seenpopup-${domId}`) && winAny.appPopupMessage3.popUpShown === false && !document.body.classList.contains('role-admin')) {
         winAny.appPopupMessage3.popUpShown = true;
         setTimeout(() => {
             MicroModal.show(domId)
+            console.log('set cookie')
             Cookies.set(`seenpopup-${domId}`, true, { expires: duration })
         }, 5000)
     }

@@ -11,7 +11,7 @@ A standard popup message app to use with 2sxc.
 | 2sxc                | ✅    | requires 2sxc v15.04
 | Dnn                 | ✅    | For v7, v8 and v9
 | Oqtane 2            | ✅    | Requires v2.02
-| No jQuery           | ✅    | 
+| No jQuery           | ✅    |
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/hTIJS1Vg) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
@@ -20,7 +20,7 @@ A standard popup message app to use with 2sxc.
 | Best Practices      | ✅    | Uses v13.10 conventions
 | Bootstrap 3         | ✔️    | Works well, but not optimized
 | Bootstrap 4         | ✅    |
-| Bootstrap 5         | ✅    | 
+| Bootstrap 5         | ✅    |
 
 ## Customize the App
 
@@ -31,21 +31,20 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 ## History
 
 * v.03.00 2021-10
-    * Updated to 2sxc 12.05 standard
-    * Now hybrid - works with Oqtane
-    * No more jQuery
+  * Updated to 2sxc 12.05 standard
+  * Now hybrid - works with Oqtane
+  * No more jQuery
 * v.03.02 2022-04
-    * Moved all access of Services to ToSic.Sxc.Services
-    * Changed all images to use latest Picture-tag technology
-    * Enabled the image configuration
-    * Replaced data-enableoptimizations with pageSvc.AssetAttributes()
+  * Moved all access of Services to ToSic.Sxc.Services
+  * Changed all images to use latest Picture-tag technology
+  * Enabled the image configuration
+  * Replaced data-enableoptimizations with pageSvc.AssetAttributes()
 * v.03.03 2022-06 
-    * Replaced all base classes with their 2sxc 14 equivalents
-    * Removed all GetService<> and used ServiceKit14
-    * Updated webpack
+  * Replaced all base classes with their 2sxc 14 equivalents
+  * Removed all GetService<> and used ServiceKit14
+  * Updated webpack
 * v.03.04 2023-02
-    * Replaced Tag.Custom with `Kit.HtmlTags`
-    * Replaced turnOn Tag with `Kit.Page.TurnOn`
-    * Removed _ from Filenames
-    * Code in one file the bs5, less duplicated code
-
+  * Replaced Tag.Custom with `Kit.HtmlTags`
+  * Replaced turnOn Tag with `Kit.Page.TurnOn`
+  * Removed _ from Filenames
+  * Code in one file the bs5, less duplicated code

@@ -2,9 +2,10 @@
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 
 @{
-  var showPopup = Content.Presentation.Activated == true          // popup activated?
-    && Content.Presentation.ActiveFrom.Date <= DateTime.Now.Date  // showFrom <= today?
-    && Content.Presentation.ActiveTo.Date >= DateTime.Now.Date;    // showTo >= today?
+  var settings = Content.Presentation;
+  var showPopup = settings.Activated == true          // popup activated?
+    && settings.ActiveFrom <= DateTime.Now.Date  // showFrom <= today?
+    && settings.ActiveTo >= DateTime.Now.Date;    // showTo >= today?
   var domId = "app-popup3-js-modal-" + CmsContext.Module.Id;
 
   // Default Toolbar with custom settings, show left
@@ -27,5 +28,5 @@
   <div class="app-popup3">
     @Html.Partial("Popup.PartModal.cshtml", new { DomId = domId, Popup = Content })
   </div>
-  @Html.Partial("Assets.cshtml", new { DomId = domId, Duration = Content.Presentation.Duration })
+  @Html.Partial("Assets.cshtml", new { DomId = domId, ShowAgainAfter = Content.Presentation.ShowAgainAfter })
 }
