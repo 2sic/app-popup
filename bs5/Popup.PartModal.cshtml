@@ -1,29 +1,28 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorPro
 @using ToSic.Razor.Blade;
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  // Get the popup from the DynamicModel (parameter passed to this partial Razor)
-  var popup = DynamicModel.Popup;
+  var popup = MyModel.Item("popupContent");
 }
 
-<div class="modal micromodal-slide" id="@DynamicModel.DomId" aria-hidden="true">
+<div class="modal micromodal-slide" id="@MyModel.String("DomId")" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-      @if (Text.Has(popup.Image)) {
+      @if (Text.Has(popup.String("Image"))) {
         <header class="modal__header">
-            @Kit.Image.Picture(popup.Field("Image"), settings: "Content", factor: 0.5, imgAlt: "")
+          @Kit.Image.Picture(popup.Field("Image"), settings: "popup", factor: 0.5)
           <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
         </header>
       }
       <div class="modal-content-content">
         <div class="modal__content">
-          @if (!Text.Has(popup.Image)) {
+          @if (!Text.Has(popup.String("Image"))) {
             <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
           }
-          @Html.Raw(popup.Text)
-          @if (Text.Has(popup.LinkText)) {
-            <a href="@Tags.SafeUrl(popup.Link)" target='@(popup.LinkNewTab ? "blank" : "self")'
-            class="btn btn-primary">@popup.LinkText</a>
+          @popup.Html("Text", container:"")
+          @if (Text.Has(popup.String("LinkText"))) {
+            <a href="@Tags.SafeUrl(popup.String("Link"))" target='@(popup.Bool("LinkNewTab") ? "blank" : "self")'
+            class="btn btn-primary">@popup.String("LinkText")</a>
           }
         </div>
       </div>
