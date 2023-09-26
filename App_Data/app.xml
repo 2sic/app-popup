@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.00.00" ExportDate="2023-05-03T15:28:59.0821639+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-26T08:07:30.1993841+02:00">
   <Header>
     <App Guid="8551a815-e9c1-4827-ae4f-c602ad441def" />
     <Language Default="en-us" />
@@ -657,19 +657,19 @@
       <Value Key="OriginalId" Value="" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredDnnVersion" Value="07.04.02" Type="String">
+      <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="03.04.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.00.00" Type="String">
+      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.04" Type="String">
+      <Value Key="Version" Value="03.05.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
@@ -808,23 +808,6 @@
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="739f6a57-2aed-484a-a839-8c61b9d1a175" AttributeSetName="Popup" EntityGUID="d088a904-419c-45d7-a012-0f26ce14c9a0">
-      <Value Key="Image" Value="file:6131" Type="Hyperlink">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="Link" Value="" Type="Hyperlink">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="LinkNewTab" Value="True" Type="Boolean">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="LinkText" Value="" Type="String">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="Text" Value="&lt;p&gt;test bs5&lt;/p&gt;" Type="String">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-    </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="8c84b22c-3b14-4385-be10-996d4545db6b" AttributeSetName="PopupSettings" EntityGUID="d40de931-b9d9-43ee-a665-745d1d276f0a">
       <Value Key="Activated" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
@@ -843,26 +826,9 @@
       <Value Key="Template" Value="d32fa539-be2b-477f-85f7-53d840cde602" Type="Entity" />
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="df509ba2-3373-4f3c-adb6-d4a1baf84453" Json="True">
-      <Value Key="Content" Value="4e23cf93-9e28-4879-99a3-553126e6d511" Type="Entity" />
+      <Value Key="Content" Value="null" Type="Entity" />
       <Value Key="Presentation" Value="null" Type="Entity" />
       <Value Key="Template" Value="d32fa539-be2b-477f-85f7-53d840cde602" Type="Entity" />
-    </Entity>
-    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="739f6a57-2aed-484a-a839-8c61b9d1a175" AttributeSetName="Popup" EntityGUID="4e23cf93-9e28-4879-99a3-553126e6d511">
-      <Value Key="Image" Value="" Type="Hyperlink">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="Link" Value="" Type="Hyperlink">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="LinkNewTab" Value="False" Type="Boolean">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="LinkText" Value="" Type="String">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
-      <Value Key="Text" Value="&lt;p&gt;test&lt;/p&gt;" Type="String">
-        <Dimension DimensionID="81" ReadOnly="false" />
-      </Value>
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="184e6ba5-d5db-4af1-a180-41b278179fd7" Json="True">
       <Value Key="Mode" Value="Koi?cssFramework" Type="String">
