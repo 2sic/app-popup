@@ -1,14 +1,16 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
+
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  var popup = MyModel.Item("popupContent");
+  var popup = As<Popup>(MyModel.Item("popupContent"));
 }
 
 <div class="modal micromodal-slide" id="@MyModel.String("DomId")" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-      @if (Text.Has(popup.String("Image"))) {
+      @if (popup.IsNotEmpty("Image")) {
         <header class="modal__header">
           @popup.Picture("Image", settings: "Content", factor: 0.5, imgClass: "img-fluid")
           <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
@@ -16,13 +18,13 @@
       }
       <div class="modal-content-content">
         <div class="modal__content">
-          @if (!Text.Has(popup.String("Image"))) {
+          @if (!popup.IsNotEmpty("Image")) {
             <button class="modal__close" type='button' aria-label="Close modal" data-micromodal-close></button>
           }
           @popup.Html("Text", container:"")
-          @if (Text.Has(popup.String("LinkText"))) {
-            <a href="@Tags.SafeUrl(popup.String("Link"))" target='@(popup.Bool("LinkNewTab") ? "blank" : "self")'
-            class="btn btn-primary">@popup.String("LinkText")</a>
+          @if (popup.IsNotEmpty("LinkText")) {
+            <a href="@Tags.SafeUrl(popup.Link)" target='@(popup.LinkNewTab ? "blank" : "self")'
+            class="btn btn-primary">@popup.LinkText</a>
           }
         </div>
       </div>

@@ -1,8 +1,12 @@
-@inherits Custom.Hybrid.RazorTyped
+@inherits AppCode.Razor.AppRazor
+@* @inherits AppCode.Razor.AppRazor<Popup> *@
+@using AppCode.Data
+
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  var popupContent = MyItem;
-  var settings = popupContent.Dyn.Presentation;
+  var popupContent = As<Popup>(MyItem);
+
+  var settings = popupContent.Presentation;
   var showPopup = settings.Activated == true          // popup activated?
     && settings.ActiveFrom <= DateTime.Now.Date  // showFrom <= today?
     && settings.ActiveTo >= DateTime.Now.Date;    // showTo >= today?
@@ -17,11 +21,11 @@
 
   <div class="alert alert-info d-flex justify-content-between">
     <div class="d-flex align-items-center">
-      @App.Resources.String("DoNotDeleteWarning")
+      @App.Resources.DoNotDeleteWarning
       @* Add Toolbar as ul li Element *@
       @contentToolbar.AsTag(popupContent)
     </div>
-    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@App.Resources.String("TestPopup")</a>
+    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@App.Resources.TestPopup</a>
   </div>
 }
 
@@ -29,5 +33,5 @@
   <div class="app-popup3">
     @Html.Partial("Popup.PartModal.cshtml", new { domId, popupContent })
   </div>
-  @Html.Partial("Assets.cshtml", new { domId, ShowAgainAfter = popupContent.Presentation.Int("ShowAgainAfter")})
+  @Html.Partial("Assets.cshtml", new { domId, ShowAgainAfter = popupContent.Presentation.ShowAgainAfter})
 }
