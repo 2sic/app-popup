@@ -4,12 +4,13 @@
 
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
+  // Get the popup content
   var popupContent = As<Popup>(MyItem);
 
   var settings = popupContent.Presentation;
-  var showPopup = settings.Activated == true          // popup activated?
-    && settings.ActiveFrom <= DateTime.Now.Date  // showFrom <= today?
-    && settings.ActiveTo >= DateTime.Now.Date;    // showTo >= today?
+  var showPopup = settings.Activated == true       // popup activated?
+    && settings.ActiveFrom <= DateTime.Now.Date    // showFrom <= today?
+    && settings.ActiveTo >= DateTime.Now.Date;     // showTo >= today?
   var domId = "app-popup3-js-modal-" + UniqueKey;
 
   // Default Toolbar with custom settings, show left
