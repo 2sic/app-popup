@@ -8,7 +8,7 @@ A standard popup message app to use with 2sxc.
 
 | Aspect              | Status | Comments or Version
 | ------------------- | :----: | -------------------
-| 2sxc                | ✅    | requires 2sxc v17.06.02
+| 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For v9.6.1+
 | Oqtane              | ✅    | Requires v04.00+
 | No jQuery           | ✅    |

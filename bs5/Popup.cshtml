@@ -1,38 +1,28 @@
 @inherits AppCode.Razor.AppRazor
-@* @inherits AppCode.Razor.AppRazor<Popup> *@
 @using AppCode.Data
 
 @* --- This is the Bootstrap5 Edition of the Files --- *@
-@{
-  // Get the popup content
-  var popupContent = As<Popup>(MyItem);
 
-  var settings = popupContent.Presentation;
-  var showPopup = settings.Activated == true       // popup activated?
-    && settings.ActiveFrom <= DateTime.Now.Date    // showFrom <= today?
-    && settings.ActiveTo >= DateTime.Now.Date;     // showTo >= today?
-  var domId = "app-popup3-js-modal-" + UniqueKey;
-
-  // Default Toolbar with custom settings, show left
-  var contentToolbar = Kit.Toolbar.Default().Settings(hover: "left", autoAddMore:"start", show:"always");
-}
-
-@* Do not delete warning and demo popup for admin *@
-@if (MyUser.IsContentAdmin) {
-
+@* Message for the admin, so he can test the popup; includes a don't-delete-this-module warning *@
+@if (MyUser.IsContentAdmin)
+{
   <div class="alert alert-info d-flex justify-content-between">
     <div class="d-flex align-items-center">
       @App.Resources.DoNotDeleteWarning
-      @* Add Toolbar as ul li Element *@
-      @contentToolbar.AsTag(popupContent)
+      @* Add Toolbar to edit popup *@
+      @Kit.Toolbar.Default(PopUp).Settings(autoAddMore:"start").AsTag()
     </div>
-    <a data-micromodal-trigger="@domId" class="btn btn-primary btn-sm text-white">@App.Resources.TestPopup</a>
+    <a data-micromodal-trigger="@DomId" class="btn btn-primary btn-sm text-white">
+      @App.Resources.TestPopup
+    </a>
   </div>
 }
 
-@if (MyUser.IsContentAdmin || showPopup) {
+@* Add the popup (may be hidden) if ShowPopup, or for the admin to test *@
+@if (MyUser.IsContentAdmin || PopUp.Presentation.PopupIsActiveAndWithinDateRange())
+{
   <div class="app-popup3">
-    @Html.Partial("Popup.PartModal.cshtml", new { domId, popupContent })
+    @Html.Partial("Popup.PartModal.cshtml")
   </div>
-  @Html.Partial("Assets.cshtml", new { domId, ShowAgainAfter = popupContent.Presentation.ShowAgainAfter})
+  @Html.Partial("Assets.cshtml")
 }
