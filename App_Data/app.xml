@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-26T08:07:30.1993841+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="17.07.00" ExportDate="2024-05-02T10:55:16.7015963+02:00">
   <Header>
     <App Guid="8551a815-e9c1-4827-ae4f-c602ad441def" />
     <Language Default="en-us" />
@@ -639,6 +639,9 @@
       <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="81" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
@@ -660,16 +663,16 @@
       <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="03.04.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="05.00.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
+      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.05.00" Type="String">
+      <Value Key="Version" Value="03.17.00" Type="String">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
     </Entity>
@@ -812,7 +815,7 @@
       <Value Key="Activated" Value="True" Type="Boolean">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
-      <Value Key="ActiveFrom" Value="2020-05-26T00:00:00" Type="DateTime">
+      <Value Key="ActiveFrom" Value="2024-03-26T00:00:00" Type="DateTime">
         <Dimension DimensionID="81" ReadOnly="false" />
       </Value>
       <Value Key="ActiveTo" Value="2039-05-26T00:00:00" Type="DateTime">
