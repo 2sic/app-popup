@@ -1,5 +1,5 @@
-let Cookies = require('../../node_modules/js-cookie');
-require('../../node_modules/micromodal');
+import Cookies from '../../node_modules/js-cookie';
+import '../../node_modules/micromodal';
 declare let MicroModal: any;
 
 const winAny = (window as any);
