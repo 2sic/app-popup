@@ -1,4 +1,4 @@
-import Cookies from '../../node_modules/js-cookie';
+import Cookies from 'js-cookie'
 import '../../node_modules/micromodal';
 declare let MicroModal: any;
 
@@ -9,13 +9,14 @@ winAny.appPopupMessage3.popUpShown = false; // parameter to prevent more than 1 
 
 function init({ domId, showAgainAfter }: { domId: string, showAgainAfter: string }) {
     MicroModal.init({ awaitCloseAnimation: true });
+    const expiresDays = Number(showAgainAfter);
 
     if (!Cookies.get(`seenpopup-${domId}`) && winAny.appPopupMessage3.popUpShown === false && !document.body.classList.contains('role-admin')) {
         winAny.appPopupMessage3.popUpShown = true;
         setTimeout(() => {
             MicroModal.show(domId)
             console.log('set cookie')
-            Cookies.set(`seenpopup-${domId}`, true, { expires: showAgainAfter })
+            Cookies.set(`seenpopup-${domId}`, 'true', Number.isFinite(expiresDays) ? { expires: expiresDays } : undefined)
         }, 5000)
     }
 }
