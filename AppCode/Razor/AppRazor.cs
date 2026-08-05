@@ -8,7 +8,7 @@ namespace AppCode.Razor
   /// </summary>
   public abstract partial class AppRazor<TModel>: Custom.Hybrid.RazorTyped<TModel>
   {
-    public string DomId => "app-popup3-js-modal-" + UniqueKey;
+    public string DomId => "app-popup3-js-modal-" + MyContext.Module.Id;
 
     public Popup PopUp => _popup ??= As<Popup>(MyItem);
     private Popup _popup;
